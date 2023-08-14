@@ -1,0 +1,19 @@
+{% extends 'Base/base.html' %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <h1>Détails sur l'actionnaire</h1>
+        <p>Nom : {{ actionnaire.nom }}</p> 
+        <p>Prénom : {{ actionnaire.prenom }}</p>
+        <p>Adresse : {{ actionnaire.adresse }}</p>
+        <p>Téléphone : {{ actionnaire.telephone }}</p>
+        <p>Email : {{ actionnaire.email }}</p>
+        <p>Apport : {{ actionnaire.apport }}</p>
+        <p>Pourcentage : {{ actionnaire.pourcentage }}</p>
+    </div>
+    <div class="mt-4 hstack gap-2">
+        <a class="btn btn-soft-primary w-100" href="{% url 'liste_actionnaires' %}">Retour en Arrière</a>
+    </div>
+</div>
+{% endblock %}
